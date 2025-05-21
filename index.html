@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Conversor de Unidades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="text-center bg-success text-white py-3 rounded">
+            <h2>Conversor de Unidades</h2>
+        </div>
+
+        <!-- Contenido todo en una sola página -->
+        <div class="my-4">
+            <!-- Longitud -->
+            <div class="converter mb-4">
+                <h4>📏 Conversión de Longitud</h4>
+                <div class="row g-2 align-items-center">
+                    <div class="col-md-3">
+                        <select class="form-select" id="longitudFrom">
+                            <option value="Metro">Metro</option>
+                            <option value="Kilómetro">Kilómetro</option>
+                            <option value="Centímetro">Centímetro</option>
+                            <option value="Milímetro">Milímetro</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">=&gt;</div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="longitudTo">
+                            <option value="Metro">Metro</option>
+                            <option value="Kilómetro">Kilómetro</option>
+                            <option value="Centímetro">Centímetro</option>
+                            <option value="Milímetro">Milímetro</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" id="longitudInput" class="form-control" placeholder="Cantidad" />
+                    </div>
+                    <div class="col-md-2">
+                        <div class="output-box" id="longitudOutput">0</div>
+                    </div>
+                </div>
+                <button class="btn btn-danger btn-sm mt-2" id="longitudClearBtn">Eliminar Historial</button>
+                <ul id="longitudHistorial" class="historial list-unstyled"></ul>
+            </div>
+
+            <!-- Peso -->
+            <div class="converter mb-4">
+                <h4>⚖️ Conversión de Peso</h4>
+                <div class="row g-2 align-items-center">
+                    <div class="col-md-3">
+                        <select class="form-select" id="pesoFrom">
+                            <option value="Kilogramo">Kilogramo</option>
+                            <option value="Gramo">Gramo</option>
+                            <option value="Libra">Libra</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">=&gt;</div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="pesoTo">
+                            <option value="Kilogramo">Kilogramo</option>
+                            <option value="Gramo">Gramo</option>
+                            <option value="Libra">Libra</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" id="pesoInput" class="form-control" placeholder="Cantidad" />
+                    </div>
+                    <div class="col-md-2">
+                        <div class="output-box" id="pesoOutput">0</div>
+                    </div>
+                </div>
+                <button class="btn btn-danger btn-sm mt-2" id="pesoClearBtn">Eliminar Historial</button>
+                <ul id="pesoHistorial" class="historial list-unstyled"></ul>
+            </div>
+
+            <!-- Temperatura -->
+            <div class="converter mb-4">
+                <h4>🌡️ Conversión de Temperatura</h4>
+                <div class="row g-2 align-items-center">
+                    <div class="col-md-3">
+                        <select class="form-select" id="temperaturaFrom">
+                            <option value="Celsius">Celsius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">=&gt;</div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="temperaturaTo">
+                            <option value="Celsius">Celsius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Kelvin">Kelvin</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" id="temperaturaInput" class="form-control" placeholder="Cantidad" />
+                    </div>
+                    <div class="col-md-2">
+                        <div class="output-box" id="temperaturaOutput">0</div>
+                    </div>
+                </div>
+                <button class="btn btn-danger btn-sm mt-2" id="temperaturaClearBtn">Eliminar Historial</button>
+                <ul id="temperaturaHistorial" class="historial list-unstyled"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
