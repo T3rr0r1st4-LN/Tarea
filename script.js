@@ -100,6 +100,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         renderizarHistorial(tipo, cargarHistorial(tipo));
 
+        // Actualización en tiempo real al escribir
+        input.addEventListener("input", () => {
+            const valor = input.value;
+            if (!valor || isNaN(valor)) {
+                output.textContent = "0";
+                return;
+            }
+            const resultado = convertir(tipo, from.value, to.value, valor);
+            output.textContent = resultado;
+        });
+
+        // Historial al presionar Enter
         input.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
                 const valor = input.value;

@@ -28,3 +28,35 @@ h4 {
 select, input[type="number"] {
     border-radius: 6px !important;
 }
+
+/* Mejoras para pantallas pequeñas */
+@media (max-width: 767.98px) {
+    .output-box {
+        min-width: auto;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .converter {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    select,
+    input[type="number"] {
+        width: 100% !important;
+    }
+}
+
+/* Ajuste para el mensaje de error en móvil */
+@media (max-width: 576px) {
+    #mensajeError {
+        bottom: auto !important;
+        top: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+    }
+}
